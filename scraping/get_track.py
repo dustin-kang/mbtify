@@ -34,3 +34,19 @@ gettrackAudioFeatures가 정상적으로 실행이 되지 않음.
 - data_info.json : 음악의 가수, 앨범등의 정보를 담은 파일
 
 """
+
+
+# data_info에 type = "mbti"를 추가해서 추후에 label 사용을 대비함.
+
+
+with open('./scraping/json_data/data_info.json') as f :
+    info = json.load(f)
+
+
+for mbti in list(info):
+    for i in range(0,len(info[f'{mbti}']['tracks'])):
+        info[f'{mbti}']['tracks'][i]['type'] = f'{mbti}'
+        tok = info[f'{mbti}']['tracks'][i]['type']
+
+with open(f'./scraping/json_data/data_info2','w') as f:
+        json.dump(info, f)
