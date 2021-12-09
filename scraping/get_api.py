@@ -145,6 +145,8 @@ def getPlaylistTracks(token, playlist_id):
 
     return playlist_track
 
+
+pli_track = {}
 track_dic = {}
 
 for i in range(0, len(list(plist_dicts.values()))):
@@ -153,5 +155,25 @@ for i in range(0, len(list(plist_dicts.values()))):
         track_dic[f'{j}'] = tracks['items'][j]['track']['id']
     # with open(f'./json_data/mbti_track/{list(plist_dicts.keys())[i].split()[0]}.json','w') as f:
     #     json.dump(track_dic, f)
+    pli_track[f"{list(plist_dicts.keys())[i].split()[0]}"] = track_dic
 
-print(track_dic.values())
+
+# with open(f'./json_data/mbti_track/mbti_tracks.json','w') as f:
+#    json.dump(pli_track, f)
+
+
+def gettrackAudioFeatures(token, ids):
+    """
+    ## 트랙에 대한 정보 가져오기
+
+    """
+    endpoint = "https://api.spotify.com/v1/audio-features?ids={ids}"
+    
+    getHeader = {
+        "Authorization" : "Bearer " + token
+    }
+
+    res = requests.get(endpoint, headers=getHeader)
+    track_features = res.json()
+    
+    return track_features
