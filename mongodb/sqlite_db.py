@@ -29,6 +29,7 @@ cur = connect.cursor()
 cur.execute(""" CREATE TABLE features_table(
         _id VARCHAR(32) NOT NULL,
         id VARCHAR(32) NOT NULL, 
+        danceability FLOAT,
         acousticness FLOAT,
         energy FLOAT,
         instrumentalness FLOAT,
@@ -59,14 +60,14 @@ cur.execute(""" CREATE TABLE info_table(
 
 with open('./tracks_features.csv', 'rt') as f:
     features =  csv.DictReader(f)
-    to_ft = [(i['_id'], i['id'], i['acousticness'], i['energy'], i['instrumentalness'], i['key'], i['liveness'], i['loudness'],
+    to_ft = [(i['_id'], i['id'], i['danceability'], i['acousticness'], i['energy'], i['instrumentalness'], i['key'], i['liveness'], i['loudness'],
         i['mode'], i['speechiness'], i['tempo'], i['valence']) for i in features]
 
 with open('./tracks_info2.csv', 'rt') as f:
     info =  csv.DictReader(f)
     to_if = [(i['_id'], i['id'], i['artist'], i['image_url'], i['release_date'], i['name'], i['popularity'], i['mbti']) for i in info]
 
-cur.executemany("INSERT INTO features_table (_id, id, acousticness, energy, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, valence) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", to_ft)
+cur.executemany("INSERT INTO features_table (_id, id, danceability, acousticness, energy, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, valence) VALUES (?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", to_ft)
 cur.executemany("INSERT INTO info_table (_id, id, artist, image_url, release_date, name, popularity, mbti) VALUES (?, ?, ?, ?, ?, ?, ?, ?);", to_if)
 connect.commit()
 connect.close
