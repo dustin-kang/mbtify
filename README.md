@@ -1,5 +1,5 @@
 # Music MBTI Classfication
 
-Spotify의 공유 링크를 이용하여 이에 해당하는 장르를 판단합니다.
-- 추가적으로 해당 링크를 이용해 트랙의 정보들을 확인하실수 있습니다.
-- 최애곡을 통해 어울리는 MBTI 맞추기 (Playlist 의 곡들의 정보를 통해 12개의 mbti 플레이리스트를 맞춘다.) 
+![Untitled 001](https://user-images.githubusercontent.com/55238671/145720251-46cd1c36-6ab4-4b6c-b41e-bbfb8254f986.png)
+![Untitled 002](https://user-images.githubusercontent.com/55238671/145720259-e08acdc8-0e34-4053-9b6e-ff96df6f5983.png)
+![Untitled1 002]["https://mbtify.herokuapp.com"](https://user-images.githubusercontent.com/55238671/145720374-c6eeec5a-042a-4f6c-951a-1a1982baf9b7.png)
