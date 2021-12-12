@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <title>
-            MBTIfy | Find MBTI with Spotify
-        </title>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="">MBTIFY : Find MBTI with Spotify Music track link</a>
-            </div>
-          </nav>
-    </head>
-    <body>
-        <div class="mx-auto" style="width: 800px; height: 250px;">
-        </div>
-        <div class="text-center">
-            <img src="..." class="rounded" alt="...">
-        </div>
-        <div class="mx-auto" style="width: 800px; height: 50px;">
-        </div>
-        <div class="mx-auto" style="width: 800px; height: 500px;">
-            <form class="row g-3">
-                
-                <p class="h3">당신의 입력하신 <strong>{% %}</strong>의 <strong>{}</strong>라는 노래는</p>
-                <p class="h2"><mark><strong>{}</strong></mark>성향의 사람들이 많이 듣는 군요.</p>
-            </form>
-        </div>
-    </body>
+<body bgcolor=#1DB954>
+
+    <center>
+
+        <h2 style="font-family:sans-serif; color: #191414;">{{ artist }}의 {{ song }}</h1>
+        <h3 style="font-family:sans-serif; color: #191414;">위 트랙은 아래와 같은 MBTI의 음악 스타일입니다.</h3>
+
+
+        <h1 style="font-family:sans-serif; color: #191414;">{{ pred[0] }}</h1><br><br>
+        <a href='/' style="font-family:sans-serif; color: #191414;">다시 해볼래요.</a>
+
+    </center>
+
+</body>
+
 </html>

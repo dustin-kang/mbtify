@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <body bgcolor=#191414>
 
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <title>
-            MBTIfy | Find MBTI with Spotify
-        </title>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="">MBTIFY : Find MBTI with Spotify Music track link</a>
-            </div>
-          </nav>
-    </head>
-    <body>
-        <div class="mx-auto" style="width: 1200px; height: 700px;">
-            <img class="fit-picture"
-            src="https://raw.githubusercontent.com/dustin-kang/Proj3_MusicMBTIClassfication/main/Untitled.001.png?token=ANFOAD77WUUWIGKDHJYPRGDBXXRG6"
-            alt="트랙을 택한 후 공유하기 > 곡 링크 복사하기 > 스포티파이 ID만 입력하시면 됩니다.">
-        </div>
-        <div class="mx-auto" style="width: 800px; height: 500px;">
-            <form class="row g-3">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Spotify Track Id</label>
-                    <input type="text" class="form-control" id="text" aria-describedby="urlHelp" placeholder="6bQfNiqyCX7UaQSvVVGo4I" name="track_id">
-                    <div id="urlHelp" class="form-text">상위 그림과 같이 Spotify Track ID를 올바르게 입력해주시면 됩니다.</div>
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit" value="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+        <center>
+
+        <img src='https://raw.githubusercontent.com/dustin-kang/Proj3_MusicMBTIClassfication/main/home_1.png' alt="MBTIFY"><br><br>
+        <img src='https://raw.githubusercontent.com/dustin-kang/Proj3_MusicMBTIClassfication/main/home_2.png' alt="example">
+
+
+
+        <form method="POST", action="{{url_for('recv')}}">
+           <b style="font-family:sans-serif; color: #1DB954;"> Track ID :  <input type="text", name='inpute_code', placeholder="6bQfNiqyCX7UaQSvVVGo4I" width="1000px"> <br><br>
+            상위 그림과 같이 Spotify Track ID를 올바르게 입력해주시면 됩니다. <br><br></b>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        
+        
+    </center>
+
     </body>
 </html>
