@@ -71,13 +71,24 @@ def getTrackFeatures(token, data):
     import pandas as pd
     import numpy as np
 
-    data = data.split("track/")[1].split("?")[0]
-    endpoint_f = f"	https://api.spotify.com/v1/audio-features/{data}"
-    endpoint_i = f"	https://api.spotify.com/v1/tracks/{data}?market=US"
+    # 음악 쿼리를 링크로 변환하는 API (Search)
+    data = data.replace(' ', '%20')
+    endpoint = f"	https://api.spotify.com/v1/search?q={data}&type=track&market=KR&limit=1"
 
     getHeader = {
         "Authorization" : "Bearer " + token
     }
+
+    res_q = requests.get(endpoint, headers=getHeader)
+    track = res_q.json()
+    track = track["tracks"]["items"][0]["external_urls"]["spotify"]
+
+    # 음악 링크 -> 데이터로 바꿔주는 API (Tracks)
+    data = track.split("track/")[1].split("?")[0]
+    endpoint_f = f"	https://api.spotify.com/v1/audio-features/{data}"
+    endpoint_i = f"	https://api.spotify.com/v1/tracks/{data}?market=US"
+
+
 
     res_f = requests.get(endpoint_f, headers=getHeader)
     res_i = requests.get(endpoint_i, headers=getHeader)
