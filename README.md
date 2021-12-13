@@ -1,7 +1,10 @@
-# Music MBTI Classfication
+![Proj3_keynote 001](https://user-images.githubusercontent.com/55238671/145755750-c8454f29-a6cd-4ca6-8711-225c83e36277.png)
+![Proj3_keynote 003](https://user-images.githubusercontent.com/55238671/145755758-b61c0c40-c1fa-4c96-b08c-0c13c7a19d9f.png)
+![Proj3_keynote 005](https://user-images.githubusercontent.com/55238671/145755773-34f3ebdb-45bf-435a-830c-7f255d043e2f.png)
+![Proj3_keynote 006](https://user-images.githubusercontent.com/55238671/145755841-536f1b63-64c2-41b5-a1ef-82828a64a27e.png)
+![Proj3_keynote 007](https://user-images.githubusercontent.com/55238671/145755848-786f2109-341c-4126-ac06-69db6e412e8b.png)
+![Proj3_keynote 008](https://user-images.githubusercontent.com/55238671/145755853-eae53031-21b5-438f-b66d-dcff1b621733.png)
 
-![Untitled 001](https://user-images.githubusercontent.com/55238671/145720251-46cd1c36-6ab4-4b6c-b41e-bbfb8254f986.png)
-![Untitled 002](https://user-images.githubusercontent.com/55238671/145720259-e08acdc8-0e34-4053-9b6e-ff96df6f5983.png)
 [![Go Link](https://user-images.githubusercontent.com/55238671/145720374-c6eeec5a-042a-4f6c-951a-1a1982baf9b7.png)](https://mbtify.herokuapp.com)
 [![Spotify](https://user-images.githubusercontent.com/55238671/145720704-e14a3f50-3a3d-42d6-9135-da7ae8ac1b27.png)](https://open.spotify.com/)
-[![youtube](https://user-images.githubusercontent.com/55238671/145720705-dc567fcd-971d-4ee3-8129-9d67ab660761.png)]()
+[![youtube](https://user-images.githubusercontent.com/55238671/145720705-dc567fcd-971d-4ee3-8129-9d67ab660761.png)](https://youtu.be/gowY7fZMITE)
