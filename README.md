@@ -1,6 +1,6 @@
 # 🎧 음악을 통해 MBTI 성향을 예측하고 추천하는 MBTIfy
 
-<a href="http://mbtify.eba-9m3ee2dq.ap-northeast-2.elasticbeanstalk.com"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/ver2_title2.png?raw=true" width="1000" height="300"></a>
+<a href="http://mbtify.eba-9m3ee2dq.ap-northeast-2.elasticbeanstalk.com"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
 
 <center>👆 클릭 시 해당 서비스를 이용할 수 있습니다.</center> 
 
@@ -75,7 +75,7 @@
 ```
 
 ## 🎵 Git Flow
-<img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/ver2_git_branch.png?raw=true" width="1000" height="300">
+<img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/gitflow.png?raw=true" width="1000" height="300">
 
 - main : 테스트가 끝나고 운영서버로 배포할 수 있는 브랜치
 - engine : ETL 작업 및 머신러닝 모델링을 담당하는 브랜치
