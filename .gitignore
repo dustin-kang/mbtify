@@ -1,0 +1,5 @@
+mbtify/.elasticbeanstalk/*
+
+mbtify/tracks.csv
+
+mbtify/screts_key.py

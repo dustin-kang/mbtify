@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <title>MBtify: 과연 결과는?</title>
+
+    <!-- Bootstrap CSS -->
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+      </style>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+<body class="text-center">
+  <!-- Optional JavaScript -->
+
+    
+  <main class="form-signin w-100 m-auto">
+      <a href={{ url }}>
+        <img class="mb-4" src={{ image }} alt="" width="300" height="300">
+      </a>
+
+      <h1 class="h3 mb-3 fw-normal">{{ artist }} 의 {{ song }}</h1>
+      <p>해당 노래는 아래와 비슷한 성향을 가진 사람들이 좋아하는 음악 스타일이래요.</p>
+      
+      <h1 style="font-family:sans-serif; color: #191414;">{{ pred }}</h1><br><br>
+
+      <a href='/' style="font-family:sans-serif; color: #191414;"><button class="w-100 btn btn-lg btn-primary" type="submit">다시 하기</button></a>
+      <hr>
+
+      <h1 class="h3 mb-3 fw-normal">😊이런 음악도 추천해요😊</h1>
+
+
+      <a href= {{ ref_url }} style="font-family:sans-serif; color: #191414;"><button type="button" class="btn btn-dark">{{ ref_track[0] }} - {{ ref_track[1] }}</button></a><br><br>
+
+      
+      <p class="mt-5 mb-3 text-muted"> &copy; 2021 dustin single Project</p>
+  </main>
+    
+</body>
+</html>
