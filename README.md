@@ -2,7 +2,7 @@
 
 <a href="http://mbtify.eba-9m3ee2dq.ap-northeast-2.elasticbeanstalk.com"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
 
-<center>👆 클릭 시 해당 서비스를 이용할 수 있습니다.</center> 
+👆 클릭 시 해당 서비스를 이용할 수 있습니다.[📱서비스 이용 방법](https://youtube.com/shorts/OBD342fP8Pk?feature=share)
 
 ## 🎵 Find Your Music for ME.
 신박한 발상으로 시작된 프로젝트로 다양한 분위기와 장르가 있는 **음악이 MBTI와 비슷한 연관성을 가지지 않을까**라는 생각을 시작으로 이를 통해 **음악을 추천**해주는 서비스로 생각을 이어갔습니다.
