@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="UTF-8">
-    <title>MBtify</title>
-
-    <!-- Bootstrap CSS -->
+    <title>Mbtify: 당신의 자주 듣는 곡은 누가 많이 들을까요?</title>
     <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -64,44 +59,21 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
 </head>
 <body class="text-center">
-  <!-- Optional JavaScript -->
-
     
-  <main class="form-signin w-100 m-auto">
-      <img class="mb-4" src="{{ url_for ('static', filename='img/logo.png') }}" alt="" width="200" height="200">
-      <h1 class="h3 mb-3 fw-normal">404 Error</h1>
-      <p>인터넷 연결이 원활하지 않습니다.</p>
-      <p>인터넷 연결 확인 후 재시도 해주세요.</p>
+    <main class="form-signin w-100 m-auto">
+        <img class="mb-4" src="{{ url_for ('static', filename='img/logo.png') }}" alt="" width="200" height="200">
+        <h1 class="h3 mb-3 fw-normal">Mbtify</h1>
+        <p>입력하신 노래가 당신의 MBTI와 맞을까요?</p>
+        
+        <form method = "POST", action="{{ url_for('result') }}">
+          <input type="text" class="form-control" Required name="Inputs" placeholder="ex) PinkVenom 블랙핑크" ></input>
+          <br><br>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">확인 하기</button>
+        </form>
 
-
-      <a href='/' style="font-family:sans-serif; color: #191414;"><button type="button" class="btn btn-dark">돌아가기</button></a><br><br>
-
-      
-      <p class="mt-5 mb-3 text-muted"> &copy; 2021 dustin single Project</p>
-  </main>
+        <p class="mt-5 mb-3 text-muted"> &copy; 2021 dustin single Project</p>
+        <a href='https://github.com/dustin-kang/db-music-mbti-classification' style="font-family:sans-serif; color: #191414;"><button type="button" class="btn btn-dark">Dustin's github</button></a>
+    </main>
     
 </body>
-=======
-=======
->>>>>>> parent of d487ffe (Delete mbtify directory)
-<html>
-
-<body bgcolor=#1DB954>
-
-    <center>
-
-
-        <iframe src="https://giphy.com/embed/9J7tdYltWyXIY" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        <h1 style="font-family:sans-serif; color: #191414;">404</h1><br><br>
-        <h3 style="font-family:sans-serif; color: #191414;">NOT FOUND</h3>
-        <a href='/' style="font-family:sans-serif; color: #191414;">돌아가기</a>
-
-    </center>
-
-</body>
-
-<<<<<<< HEAD
->>>>>>> parent of d487ffe (Delete mbtify directory)
-=======
->>>>>>> parent of d487ffe (Delete mbtify directory)
 </html>

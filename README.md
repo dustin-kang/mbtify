@@ -1,41 +1,101 @@
-# 🎧 Mbtify
-Spotify Track을 활용한 MBTI 분류 서비스
+# 🎧 음악을 통해 MBTI 성향을 예측하고 추천하는 MBTIfy
 
-<img src="https://user-images.githubusercontent.com/55238671/145755750-c8454f29-a6cd-4ca6-8711-225c83e36277.png" width="500">
+<a href="http://mbtify.eba-9m3ee2dq.ap-northeast-2.elasticbeanstalk.com"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/ver2_title2.png?raw=true" width="1000" height="300"></a>
 
-## About Mbtify
-> Find MBTI using track
+<center>👆 클릭 시 해당 서비스를 이용할 수 있습니다.</center> 
 
-Spotify 음원 플랫폼에서 제공하는 MBTI 별 플레이리스트와 곡들을 추출하여 비슷한 성향을 가진 음악적 특징을 활용하여 사용자가 좋아하는 음악의 MBTI를 성향을 예측할 수 있는 서비스이다.
+## 🎵 Find Your Music for ME.
+신박한 발상으로 시작된 프로젝트로 다양한 분위기와 장르가 있는 **음악이 MBTI와 비슷한 연관성을 가지지 않을까**라는 생각을 시작으로 이를 통해 **음악을 추천**해주는 서비스로 생각을 이어갔습니다.
 
-## Data Pipeline
-<img src="https://user-images.githubusercontent.com/55238671/145755773-34f3ebdb-45bf-435a-830c-7f255d043e2f.png" width="500">
+## 🎵 MBTIfy Process
 
-1. [스포티파이 개발자 홈페이지](https://developer.spotify.com/) 에서 유저들이 만들어낸 플레이리스트의 트랙데이터를 수집합니다.
-2. 수집한 데이터들은 `MongoDB`에 적재를 하게 됩니다.
-3. 시각화를 위해 적재한 데이터를 LocalDB로 옮기게 됩니다.
-4. 이후 `Docker`를 이용해 `Metabase`에서 데이터를 시각화합니다.
-5. `Scikit-Learn`을 통해 XGBoost로 모델링을 진행합니다.
-6. 마지막으로 `Flask`로 Web 서비스를 구축하고 `Heroku`로 배포 하였습니다.
 
-> 자세한 [Keynote 내용](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Keynote.zip)과 [발표 영상](https://www.youtube.com/watch?v=gowY7fZMITE&feature=youtu.be)은 링크를 통해 확인하실 수 있습니다.
 
-## Process
-|순번|과정|디렉토리|툴|
+### 🔷 음원 DB 구축
+- 이 프로젝트에서 사용할 음원 데이터는 [**Spotify Developer 사이트**](https://developer.spotify.com/)에서 제공하는 MBTI **플레이리스트들 기반으로 API를 크롤링**하였습니다.
+  >  💡 지난 버전의 데이터 부족을 해결하기 위해 4000곡의 음원 데이터로 정확도를 높혔습니다.
+
+- 버전 1에서는 추가적인 데이터 분석 **시각화를 위해 SQLite를 사용**하여 분석을 진행하였으나 이번에는 CSV 파일로 저장하였습니다.
+- 기존 API를 통해 JSON 파일에서 분석, 모델링에 필요한 Features 만 가공하여 정제된 데이터로 저장하였습니다. 
+
+### 🔷 데이터 분석 시각화
+<center><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/EDA%20Dashboard.png?raw=true" width="800"> </center>
+  
+- 감정형, 사고형의 따라 장조와 단조간 차이가 있다는 것을 발견했습니다.
+- 내향형일 수록 어쿠스틱함을 선호하는 것으로 보입니다.
+- 긍정적 척도는 보통 외향성이 많았으며, 그 중 ESTP가 가장 높았습니다.
+- 데이터 시각화 대시보드는 Metabase 툴을 통해 시각화 하였습니다.
+
+### 🔷 머신러닝 모델링
+- 지도 학습 중 **XGBoost Classifier 모델을 활용**하여 데이터를 학습하여 분류하였습니다.
+- 데이터의 특성들(features)의 **수치적 균형을 맞추기 위해 MinMaxScaler를 사용**하였습니다.
+- 사용자가 음원을 입력하면 모델을 통해 예측하고 **이 성향에 맞는 음원을 랜덤으로 추천**해주는 서비스 입니다.
+> 💡 버전 2부터 음원을 추천해주는 서비스를 도입하였습니다.
+
+### 🔷 Flask 웹 개발 및 AWS EB 서버
+- Flask 웹 개발 프레임워크를 사용하여 **웹 서비스를 개발**하였습니다.
+- 사용자가 input에 입력하면 POST 프토토콜을 통해 result 페이지에 출력하게됩니다.
+- AWS EB를 이용하여 **웹 어플리케이션을 배포**하고 도메인 등록으로 사용자에게 간편한 플랫폼을 제공합니다.
+> 💡 버전 1에서는 Heroku를 사용하였고 버전 2에서는 시험삼아 AWS EB를 사용해봤습니다.
+
+> 💡 [Heroku 대신 AWS를 사용한 이유](https://github.com/dustin-kang/db-music-mbti-classification/issues/16#issue-1434680476)
+
+
+## 🎵 Requirements & File Tree
+- python 3.8
+- scikit-learn 1.1.3
+- flask 2.2.2
+- pandas 1.5.1
+- requests 2.28.1
+- xgboost 1.7.0
+- awsebcli 3.20.3
+
+```py
+├── README.md # README 
+├── keynote # 버전 1 발표 자료
+└── mbtify 
+    ├── application.py # 웹 서비스 실행 파일
+    ├── crawling_app.py # 데이터 크롤링 및 API 실행 파일
+    ├── requirements.txt # 버전 관리
+    ├── screts_key.py # 비밀 키
+    ├── static # 이미지 파일 및 디자인 파일
+    │   ├── css
+    │   │   ├── bootstrap.min.css
+    │   │   └── main.css
+    │   └── img
+    │       └── logo.png
+    ├── templates # 페이지 html 파일
+    │   ├── 404.html
+    │   ├── 500.html
+    │   ├── main.html
+    │   ├── recv.html
+    │   └── search.html
+    ├── tracks.csv # 데이터 파일
+    └── xgb.model # 머신러닝 모델
+```
+
+## 🎵 Git Flow
+<img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/ver2_git_branch.png?raw=true" width="1000" height="300">
+
+- main : 테스트가 끝나고 운영서버로 배포할 수 있는 브랜치
+- engine : ETL 작업 및 머신러닝 모델링을 담당하는 브랜치
+- develop : 테스트 전 웹 기능 개발을 담당하는 브랜치
+- release : 출시전 배포 시험 후 테스팅을 하는 브랜치
+
+##  🎵 성과 및 관련 사이트
+
+|결과 사이트|키노트 자료|발표 영상|배포 후 이슈|
 |---|---|---|---|
-|1|Spotify API를 이용한 데이터 스크레이핑|[Scraping](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/tree/main/collect/scraping)|Spotify API|
-|2|트랙 데이터 적재및 관리|[Collecting](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/tree/main/collect)|MongoDB, SQLite|
-|3|머신러닝 모델링|[Modeling](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/mbtify/modeling.py)|Scikit-Learn|
-|4|데이터 분석 및 시각화 |[Visualization](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Proj3_keynote/Proj3_keynote.009.png)|Docker, Metabase|
-|5|웹 서비스 구현|[Web Service](https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/tree/main/mbtify)|Flask, Heroku|
-
-## Data Schema, flow
-<img src="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Proj3_keynote/Proj3_keynote.011.png?raw=true" width="300"> <img src="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Proj3_keynote/Proj3_keynote.012.png?raw=true" width="300">
+|<a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/mbtify/static/img/logo.png?raw=true" width="150"></a>|<a href="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Keynote.zip"><img src="https://help.apple.com/assets/62E31B0DCD51FF6A7744DA41/62E31B10CD51FF6A7744DA65/ko_KR/9f4f29146401b66b0d7a0668c3345ff4.png" width="150"></a>|<a href="https://www.youtube.com/watch?v=gowY7fZMITE&feature=youtu.be"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="150"></a>|<a href="https://github.com/dustin-kang/db-music-mbti-classification/issues/17"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Commons-emblem-issue.svg/768px-Commons-emblem-issue.svg.png" width="150"></a>|
 
 
-## Feed Back
- **데이터 수집부터 데이터베이스 적재, 머신러닝 활용, 웹서비스 개발 및 배포 과정 등 데이터 분야 전과정의 흐름을 간략하게 진행했던 프로젝트** 였다.
+- 데이터 수집부터 데이터베이스 적재, 머신러닝 활용, 웹서비스 개발 및 배포 과정 등 데이터 분야 전과정의 흐름을 간략하게 진행했던 프로젝트였다.
+- 버전 1, 버전 2에서도 급격한 트래픽 증가로 서버에 문제가 발생하는 것은 아직 해결되지 못했다. 추후 이슈에 적어놓고 차근차근 해결해 나갈 예정이다.
 
-## [▶️ 결과 사이트 Mbtify](https://mbtify.herokuapp.com/)
 
-<img src="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/site_gif.gif?raw=true">
+<br>
+<br>
+<br>
+<br>
+
+<center> @2021 dustin single project </center>
