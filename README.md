@@ -1,8 +1,9 @@
 # 🎧 음악을 통해 MBTI 성향을 예측하고 추천하는 MBTIfy
 
-<a href="http://mbtify.eba-9m3ee2dq.ap-northeast-2.elasticbeanstalk.com"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
+<a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
 
-👆 클릭 시 해당 서비스를 이용할 수 있습니다.[📱서비스 구현 영상](https://youtube.com/shorts/OBD342fP8Pk?feature=share)
+👆 클릭 시 해당 서비스를 이용할 수 있습니다. (현재 서버 보수중)
+[📱 서비스 구현 영상](https://youtube.com/shorts/OBD342fP8Pk?feature=share)
 
 ## 🎵 Find Your Music for ME.
 신박한 발상으로 시작된 프로젝트로 다양한 분위기와 장르가 있는 **음악이 MBTI와 비슷한 연관성을 가지지 않을까**라는 생각을 시작으로 이를 통해 **음악을 추천**해주는 서비스로 생각을 이어갔습니다.
