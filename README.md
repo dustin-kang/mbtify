@@ -2,7 +2,6 @@
 
 <a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
 
-👆 클릭 시 해당 서비스를 이용할 수 있습니다. (현재 서버 보수중)
 [📱 서비스 구현 영상](https://youtube.com/shorts/OBD342fP8Pk?feature=share)
 
 ## 🎵 Find Your Music for ME.
@@ -85,9 +84,9 @@
 
 ##  🎵 성과 및 관련 사이트
 
-|결과 사이트|키노트 자료|발표 영상|배포 후 이슈|
+|결과 시연 영상|키노트 자료|발표 영상|배포 후 이슈|
 |---|---|---|---|
-|<a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/mbtify/static/img/logo.png?raw=true" width="150"></a>|<a href="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Keynote.zip"><img src="https://help.apple.com/assets/62E31B0DCD51FF6A7744DA41/62E31B10CD51FF6A7744DA65/ko_KR/9f4f29146401b66b0d7a0668c3345ff4.png" width="150"></a>|<a href="https://www.youtube.com/watch?v=gowY7fZMITE&feature=youtu.be"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="150"></a>|<a href="https://github.com/dustin-kang/db-music-mbti-classification/issues/17"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Commons-emblem-issue.svg/768px-Commons-emblem-issue.svg.png" width="150"></a>|
+|<a href="https://youtube.com/shorts/OBD342fP8Pk?feature=share"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/mbtify/static/img/logo.png?raw=true" width="150"></a>|<a href="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Keynote.zip"><img src="https://help.apple.com/assets/62E31B0DCD51FF6A7744DA41/62E31B10CD51FF6A7744DA65/ko_KR/9f4f29146401b66b0d7a0668c3345ff4.png" width="150"></a>|<a href="https://www.youtube.com/watch?v=gowY7fZMITE&feature=youtu.be"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="150"></a>|<a href="https://github.com/dustin-kang/db-music-mbti-classification/issues/17"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Commons-emblem-issue.svg/768px-Commons-emblem-issue.svg.png" width="150"></a>|
 
 
 - 데이터 수집부터 데이터베이스 적재, 머신러닝 활용, 웹서비스 개발 및 배포 과정 등 데이터 분야 전과정의 흐름을 간략하게 진행했던 프로젝트였다.
