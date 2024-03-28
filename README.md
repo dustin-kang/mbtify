@@ -1,6 +1,6 @@
 # 🎧 음악을 통해 MBTI 성향을 예측하고 추천하는 MBTIfy
 
-<a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/title2.png?raw=true" width="1000" height="300"></a>
+<a href="http://www.mbtify.ml"><img src="https://github.com/dustin-kang/mbtify/assets/155930071/5c7fa6ea-ac8c-41bf-a98f-89f19fafd257" width="1000" height="400"></a>
 
 [📱 서비스 구현 영상](https://youtube.com/shorts/OBD342fP8Pk?feature=share)
 
@@ -19,7 +19,7 @@
 - 기존 API를 통해 JSON 파일에서 분석, 모델링에 필요한 Features 만 가공하여 정제된 데이터로 저장하였습니다. 
 
 ### 🔷 데이터 분석 시각화
-<center><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/EDA%20Dashboard.png?raw=true" width="800"> </center>
+<center><img src="https://github.com/dustin-kang/mbtify/assets/155930071/08c5f68d-a98a-40cd-b79f-e3ff66fcd94d" width="800"> </center>
   
 - 감정형, 사고형의 따라 장조와 단조간 차이가 있다는 것을 발견했습니다.
 - 내향형일 수록 어쿠스틱함을 선호하는 것으로 보입니다.
@@ -75,7 +75,7 @@
 ```
 
 ## 🎵 Git Flow
-<img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/keynote/gitflow.png?raw=true" width="1000" height="300">
+<img src="https://github.com/dustin-kang/mbtify/assets/155930071/1b284d0c-d9b3-4cd9-be87-639141416643" width="1000" height="300">
 
 - main : 테스트가 끝나고 운영서버로 배포할 수 있는 브랜치
 - engine : ETL 작업 및 머신러닝 모델링을 담당하는 브랜치
