@@ -82,20 +82,10 @@
 - develop : 테스트 전 웹 기능 개발을 담당하는 브랜치
 - release : 출시전 배포 시험 후 테스팅을 하는 브랜치
 
-##  🎵 성과 및 관련 사이트
-
-|결과 시연 영상|키노트 자료|발표 영상|배포 후 이슈|
-|---|---|---|---|
-|<a href="https://youtube.com/shorts/OBD342fP8Pk?feature=share"><img src="https://github.com/dustin-kang/db-music-mbti-classification/blob/main/mbtify/static/img/logo.png?raw=true" width="150"></a>|<a href="https://github.com/dustin-kang/Proj3_MusicMBTIClassfication/blob/main/keynote/Keynote.zip"><img src="https://help.apple.com/assets/62E31B0DCD51FF6A7744DA41/62E31B10CD51FF6A7744DA65/ko_KR/9f4f29146401b66b0d7a0668c3345ff4.png" width="150"></a>|<a href="https://www.youtube.com/watch?v=gowY7fZMITE&feature=youtu.be"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="150"></a>|<a href="https://github.com/dustin-kang/db-music-mbti-classification/issues/17"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Commons-emblem-issue.svg/768px-Commons-emblem-issue.svg.png" width="150"></a>|
-
+##  🎵 성과
 
 - 데이터 수집부터 데이터베이스 적재, 머신러닝 활용, 웹서비스 개발 및 배포 과정 등 데이터 분야 전과정의 흐름을 간략하게 진행했던 프로젝트였다.
 - 버전 1, 버전 2에서도 급격한 트래픽 증가로 서버에 문제가 발생하는 것은 아직 해결되지 못했다. 추후 이슈에 적어놓고 차근차근 해결해 나갈 예정이다.
 
-
-<br>
-<br>
-<br>
-<br>
 
 <center> @2021 dustin single project </center>
